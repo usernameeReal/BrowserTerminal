@@ -60,6 +60,6 @@ term.onTitleChange=(t)=>{
 conn.onclose=()=>{
     term.reset();
     term.write("DISCONNECTED\n");
-    window.close();
+    //window.close();
 }
 //term.toggleFullscreen();

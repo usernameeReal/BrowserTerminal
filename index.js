@@ -9,9 +9,18 @@ if (!probeRes.status) {
 const express = require("express");
 const {WebSocketServer} = require("ws");
 const app = express();
+const fs = require("fs");
 const pty = require('node-pty');
 app.get("/probe",(req,res)=>{
     res.send("ok")
+})
+app.get("/conf",(req,res)=>{
+    if (fs.existsSync('~/.config/browserterminal.json')) {
+        res.sendFile("~/.config/browserterminal.json")
+
+    } else {
+        res.status(404).send('no config');
+    }
 })
 app.get("/stop",(req,res)=>{
     process.exit();

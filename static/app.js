@@ -6,6 +6,25 @@ const fitAddon = new FitAddon.FitAddon();
 term.loadAddon(fitAddon)
 term.open(document.getElementById('term'));  // Open the terminal in #terminal-container
 var conn = new WebSocket(location.protocol.replace("http","ws")+"//"+location.host);
+var config = {};
+function updateConf() {
+    console.log('loading config',config);
+    if (config.theme && typeof config.theme == 'object') {
+        term.setOption('theme',config.theme);
+    }
+}
+fetch('/conf').then(async x=>{
+    if (x.status==200) {
+        x.json().then(conf=>{
+            config=conf;
+            updateConf();
+        }).catch(err=>{
+            console.warn('config load failed with code',x.status,err);
+        })
+    }
+}).catch(err=>{
+    console.warn('config load failed with error',err);
+})
 conn.onmessage=(m)=>{
     var dat = m.data.toString();
 if (dat.startsWith("d")) {

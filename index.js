@@ -15,8 +15,8 @@ app.get("/probe",(req,res)=>{
     res.send("ok")
 })
 app.get("/conf",(req,res)=>{
-    if (fs.existsSync('~/.config/browserterminal.json')) {
-        res.sendFile("~/.config/browserterminal.json")
+    if (fs.existsSync(process.env.HOME+'/.config/browserterminal.json')) {
+         res.sendFile(process.env.HOME+'/.config/browserterminal.json');
 
     } else {
         res.status(404).send('no config');

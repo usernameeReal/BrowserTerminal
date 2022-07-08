@@ -3,4 +3,4 @@ Download [BrowerTerminal.zip](https://github.com/usernameeReal/BrowserTerminal/b
 Then run `chmod +x BrowserTerminal` inside the extracted zip's build folder.
 
 Finally run `./BrowserTerminal` to start it!
-## Built on: Fri Jul  8 17:44:23 UTC 2022
+## Built on: Fri Jul  8 17:53:42 UTC 2022

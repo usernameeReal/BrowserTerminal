@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-sudo apt update && sudo apt install zip -y
 npm i
 cd static/
 npm i

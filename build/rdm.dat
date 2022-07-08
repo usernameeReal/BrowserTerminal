@@ -1,3 +1,6 @@
 # BrowserTerminal build
-Download both BrowerTerminal and pty.node in the same directory for it to work.
+Download [BrowerTerminal.zip](https://github.com/usernameeReal/BrowserTerminal/blob/main/build/BrowserTerminal.zip?raw=true) and extract it.
+Then run `chmod +x BrowserTerminal` inside the extracted zip's build folder.
+
+Finally run `./BrowserTerminal to start it`
 ## Built on: 

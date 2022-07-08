@@ -1,9 +1,12 @@
 # Theming BrowserTerminal
 To theme BrowserTerminal you first have to create a config file at `~/.config/browserterminal.json`.
+## Pre-made themes
+- [Coffee theme by ari](https://github.com/coffee-theme/coffee.browserterminal)
+## Making themes
 The config file uses the JSON format, so I assume you understand how JSON works.
 Create a key in the config file called `theme`
 theme is an xtermjs ITheme object. See more about the format [here](https://xtermjs.org/docs/api/terminal/interfaces/itheme/)
-Here's a sample config file
+Here's a sample config file:
 ```json
 {
     "theme": {

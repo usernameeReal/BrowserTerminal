@@ -2,7 +2,7 @@ const port = 40486;//Math.floor(Math.random()*2000)+40000;
 const cp = require("child_process");
 let probeRes = cp.spawnSync("curl", ["--fail", "127.0.0.1:"+port+"/open"]);
 if (!probeRes.status) {
-    console.log('already running')
+    console.log('Already running or curl is not installed.')
     process.exit();
 };
 

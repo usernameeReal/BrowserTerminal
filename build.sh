@@ -10,5 +10,6 @@ mkdir -p build/node_modules/node-pty/build/Release/
 
 cp node_modules/node-pty/build/Release/pty.node build/node_modules/node-pty/build/Release/pty.node
 nexe -t x64-12.16.2 -r static/ -o browsertty index.js
+rm build/BrowserTerminal.zip || true
 zip -r BrowserTerminal.zip build/
 mv BrowserTerminal.zip build/
